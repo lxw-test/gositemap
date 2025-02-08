@@ -36,7 +36,7 @@ func (n *news) SetLanguage(language string) *news {
 		for _, v := range all {
 			if v == language {
 				n.Language = v
-				break
+				return n
 			}
 		}
 		panic(InvalidLanguageError)
